@@ -4,16 +4,16 @@
  */
 
 import React, { Component } from 'react'; // eslint-disable-line no-unused-vars
-import { canUseDOM } from 'react/lib/ExecutionEnvironment';
+import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
 import EventEmitter from 'eventemitter3';
 
 let EE;
-let viewport = {width: 1366, height: 768}; // Default size for server-side rendering
+let viewport = { width: 1366, height: 768 }; // Default size for server-side rendering
 const RESIZE_EVENT = 'resize';
 
 function handleWindowResize() {
   if (viewport.width !== window.innerWidth || viewport.height !== window.innerHeight) {
-    viewport = {width: window.innerWidth, height: window.innerHeight};
+    viewport = { width: window.innerWidth, height: window.innerHeight };
     EE.emit(RESIZE_EVENT, viewport);
   }
 }
@@ -25,7 +25,7 @@ function withStyles(ComposedComponent) {
       super();
 
       this.state = {
-        viewport: canUseDOM ? {width: window.innerWidth, height: window.innerHeight} : viewport
+        viewport: canUseDOM ? { width: window.innerWidth, height: window.innerHeight } : viewport
       };
     }
 
@@ -52,7 +52,7 @@ function withStyles(ComposedComponent) {
     }
 
     handleResize(value) {
-      this.setState({viewport: value});
+      this.setState({ viewport: value });
     }
 
   };

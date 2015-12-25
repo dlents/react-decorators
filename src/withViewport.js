@@ -3,9 +3,9 @@
  * Copyright (c) Konstantin Tarkus | MIT License
  */
 
-const React = require('react');
-const ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
-const EventEmitter = require('eventemitter3');
+import React, { Component } from 'react'; // eslint-disable-line no-unused-vars
+import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
+import EventEmitter from 'eventemitter3';
 
 let EE;
 let viewport = { width: 1366, height: 768 }; // Default size for server-side rendering
@@ -19,13 +19,13 @@ function handleWindowResize() {
 }
 
 function withViewport(ComposedComponent) {
-  return class Viewport extends React.Component {
+  return class Viewport extends Component {
 
     constructor() {
       super();
 
       this.state = {
-        viewport: ExecutionEnvironment.canUseDOM ?
+        viewport: canUseDOM ?
                   { width: window.innerWidth, height: window.innerHeight } : viewport
       };
     }

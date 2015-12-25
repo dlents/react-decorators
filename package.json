@@ -1,6 +1,6 @@
 {
   "name": "react-decorators",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A collection of higher-order React components",
   "keywords": [
     "react",
@@ -22,16 +22,16 @@
     "test": "mocha --compilers js:babel/register --watch"
   },
   "peerDependencies": {
-    "eventemitter3": "^1.0.1",
-    "react": "^0.13.0"
+    "eventemitter3": "*",
+    "react": "*"
   },
   "devDependencies": {
-    "babel": "^5.5.8",
-    "babel-eslint": "^3.0.1",
-    "chai": "^3.0.0",
-    "eslint": "^0.20.0",
-    "eslint-plugin-react": "^2.2.0",
-    "mocha": "^2.2.5"
+    "babel": "~6",
+    "babel-eslint": "~5",
+    "chai": "~3",
+    "eslint": "~1",
+    "eslint-plugin-react": "~3",
+    "mocha": "~2"
   },
   "engines": {
     "node": ">= 0.10",
