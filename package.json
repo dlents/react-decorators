@@ -17,7 +17,7 @@
   ],
   "main": "./lib/index.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
+    "build": "rimraf && babel src --out-dir lib",
     "lint": "eslint src test",
     "test": "mocha --compilers js:babel/register --watch"
   },
@@ -27,14 +27,15 @@
   },
   "devDependencies": {
     "babel": "~6",
+    "babel-cli": "~6",
+    "babel-core": "~6",
     "babel-eslint": "~5",
+    "babel-preset-es2015": "~6",
     "chai": "~3",
     "eslint": "~1",
+    "eslint-config-airbnb": "~1",
     "eslint-plugin-react": "~3",
-    "mocha": "~2"
-  },
-  "engines": {
-    "node": ">= 0.10",
-    "npm": ">= 2.1"
+    "mocha": "~2",
+    "rimraf": "~2",
   }
 }
