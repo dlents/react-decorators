@@ -19,7 +19,7 @@
   "scripts": {
     "lint": "eslint src test",
     "compile": "babel --presets es2015,stage-0 -d lib src",
-    "preinstall": "npm run compile",
+    "postinstall": "npm run compile",
     "fooTest": "mocha --compilers js:babel-core/register"
   },
   "peerDependencies": {
