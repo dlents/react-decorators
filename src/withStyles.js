@@ -7,14 +7,14 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import insertCss from './insertCss';
+// import insertCss from './insertCss';
 import React, { Component } from 'react';
 
 function withStyles(...styles) {
   return (BaseComponent) => class StyledComponent extends Component {
 
     componentWillMount() {
-      this.removeCss = insertCss.apply(null, styles);
+      this.removeCss = styles._insertCss;
     }
 
     componentWillUnmount() {
