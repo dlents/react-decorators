@@ -18,8 +18,8 @@
   "main": "./lib/index.js",
   "scripts": {
     "lint": "eslint src test",
-    "compile": "babel --presets es2015,stage-0 -d lib/ src/",
-    "prepublish": "npm run compile",
+    "compile": "babel --presets es2015,stage-0 -d lib src",
+    "preinstall": "npm run compile",
     "fooTest": "mocha --compilers js:babel-core/register"
   },
   "peerDependencies": {
