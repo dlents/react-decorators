@@ -3,5 +3,5 @@
  * Copyright (c) Konstantin Tarkus | MIT License
  */
 
-export { withStyles } from './withStyles.js';
-export { withViewPort } from './withViewport.js';
+export { default as withStyles } from './withStyles.js';
+export { default as withViewPort } from './withViewport.js';
