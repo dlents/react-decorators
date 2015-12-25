@@ -7,16 +7,14 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, { Component, PropTypes } from 'react';
+import insertCss from './insertCss';
+import React, { Component } from 'react';
 
 function withStyles(...styles) {
   return (BaseComponent) => class StyledComponent extends Component {
-    static contextTypes = {
-      insertCss: PropTypes.func.isRequired
-    };
 
     componentWillMount() {
-      this.removeCss = this.context.insertCss.apply(undefined, styles);
+      this.removeCss = insertCss.apply(null, styles);
     }
 
     componentWillUnmount() {
