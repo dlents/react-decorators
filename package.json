@@ -19,6 +19,7 @@
   "scripts": {
     "lint": "eslint src test",
     "compile": "babel src --out-dir lib --presets es2015,stage-0,react",
+    "install": "npm run compile",
     "prepublish": "npm run compile",
     "build": "npm run compile",
     "fooTest": "mocha --compilers js:babel-core/register"
