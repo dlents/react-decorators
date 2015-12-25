@@ -1,6 +1,6 @@
 .idea
-.babelrc
+# .babelrc
 .editorconfig
-.eslintrc
+# .eslintrc
 .gitattributes
 .npmignore
