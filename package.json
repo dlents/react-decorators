@@ -18,7 +18,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "lint": "eslint src test",
-    "compile": "babel --presets es2015,stage-0 -d lib src",
+    "compile": "babel src --out-dir lib --presets es2015,stage-0",
     "prepublish": "npm run compile",
     "postinstall": "npm run-script compile",
     "fooTest": "mocha --compilers js:babel-core/register"
