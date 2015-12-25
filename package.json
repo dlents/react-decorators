@@ -18,7 +18,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "lint": "eslint src test",
-    "compile": "babel src --out-dir lib --presets es2015,stage-0",
+    "compile": "babel src --out-dir lib --presets es2015,stage-0 --plugins transform-react-jsx",
     "prepublish": "npm run compile",
     "fooTest": "mocha --compilers js:babel-core/register"
   },
