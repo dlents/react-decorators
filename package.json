@@ -19,7 +19,8 @@
   "scripts": {
     "lint": "eslint src test",
     "build": "rimraf lib && babel src --out-dir lib",
-    "test": "mocha --compilers js:babel-core/register"
+    "fooTest": "mocha --compilers js:babel-core/register",
+    "postinstall": "node ./npm-scripts/post-install.js"
   },
   "peerDependencies": {
     "eventemitter3": "*",

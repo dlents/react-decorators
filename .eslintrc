@@ -1,5 +1,10 @@
 {
   "extends": "rackt",
+  "ecmaFeatures": {
+    "blockBindings": true,
+    "forOf": true,
+    "jsx": true
+  },
   "globals": {
     "__DEV__": true
   },
@@ -11,9 +16,6 @@
     "node": true,
     "es6": true
   },
-  "ecmaFeatures": {
-    "jsx": true
-  },
   "rules": {
     // Strict mode
     "strict": [2, "never"],
@@ -23,6 +25,7 @@
     "quotes": [2, "single"],
     "comma-dangle": [2, "never"],
     "semi": 0,
+    "no-extra-semi": 2,
 
     // react
     "react/jsx-uses-react": 1,
