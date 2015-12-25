@@ -17,9 +17,9 @@
   ],
   "main": "./lib/index.js",
   "scripts": {
-    "test": "eslint src test && mocha test --compilers js:babel-core/register",
-    "build": "rimraf && babel src --out-dir lib",
-    "prepublish": "rimraf lib && babel src --out-dir lib"
+    "lint": "eslint src test",
+    "build": "rimraf lib && babel src --out-dir lib",
+    "test": "mocha --compilers js:babel-core/register"
   },
   "peerDependencies": {
     "eventemitter3": "*",
@@ -31,11 +31,17 @@
     "babel-core": "~6",
     "babel-eslint": "^5.0.0-beta6",
     "babel-preset-es2015": "~6",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
     "chai": "~3",
     "eslint": "~1",
     "eslint-config-airbnb": "~1",
     "eslint-plugin-react": "~3",
-    "mocha": "~2",
+    "mocha": "~2.0",
     "rimraf": "~2"
+  },
+  "engines": {
+    "node": ">=0.10.3",
+    "npm": ">=2"
   }
 }

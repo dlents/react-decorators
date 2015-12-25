@@ -1,14 +1,8 @@
-/**
- * React Decorators
- * Copyright (c) Konstantin Tarkus | MIT License
- */
-
-import React from 'react/addons';
+import ReactTestUtils from 'react-addons-test-utils';
 import { describe, it } from 'mocha';
 import { expect } from 'chai';
 import withViewport from '../src/withViewport.js';
 
-const TestUtils = React.addons.TestUtils;
 
 describe('withViewport', () => {
 
@@ -16,7 +10,7 @@ describe('withViewport', () => {
     class MyComponent { }
 
     const ViewportComponent = withViewport(MyComponent);
-    const renderer = TestUtils.createRenderer();
+    const renderer = ReactTestUtils.createRenderer();
 
     renderer.render(<ViewportComponent />);
     const output = renderer.getRenderOutput();
