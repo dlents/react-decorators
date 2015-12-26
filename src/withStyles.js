@@ -14,7 +14,7 @@ function withStyles(...styles) {
   return (BaseComponent) => class StyledComponent extends Component {
 
     componentWillMount() {
-      this.removeCss = styles._insertCss;
+      this.removeCss = styles.insertCss;
     }
 
     componentWillUnmount() {
